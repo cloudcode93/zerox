@@ -1,0 +1,2 @@
+{"timestamp":"2026-03-22T17:17:36.776Z","level":"WARN","event":"AUTH_FAILURE","ip":"::1","method":"POST","path":"/auth/sync-user","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.6456","detail":"Missing or invalid authorization header"}
+{"timestamp":"2026-03-22T17:17:36.779Z","level":"WARN","event":"API_ERROR","ip":"::1","method":"POST","path":"/auth/sync-user","statusCode":401,"detail":"Missing or invalid authorization header"}

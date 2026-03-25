@@ -1,0 +1,14 @@
+2026-03-23T07:54:55.864Z - server.js - invalid algorithm
+2026-03-23T07:55:26.001Z - server.js - invalid algorithm
+Algorithm used by token: ES256
+2026-03-23T07:56:14.222Z - auth.js - invalid algorithm
+2026-03-23T07:56:15.443Z - server.js - invalid algorithm
+2026-03-23T07:56:16.588Z - server.js - invalid algorithm
+2026-03-23T07:56:18.623Z - server.js - invalid algorithm
+2026-03-23T07:56:22.652Z - server.js - invalid algorithm
+Socket Token Alg: ES256
+2026-03-23T07:56:35.861Z - server.js - invalid algorithm
+Socket Token Alg: ES256
+2026-03-23T07:56:52.172Z - server.js - invalid algorithm
+Socket Token Alg: ES256
+2026-03-23T07:57:22.269Z - server.js - invalid algorithm
