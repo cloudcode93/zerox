@@ -1,8 +1,0 @@
-{
-  "maintenance_mode": false,
-  "require_email_verification": false,
-  "allow_new_registrations": true,
-  "enable_beta": false,
-  "disable_posting": false,
-  "disable_chat": false
-}
