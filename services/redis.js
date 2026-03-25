@@ -19,7 +19,7 @@ function createClient(label = 'main') {
   }
 
   const client = new Redis(REDIS_URL, {
-    maxRetriesPerRequest: 3,
+    maxRetriesPerRequest: null,
     retryStrategy(times) {
       if (times > 10) return null; // stop retrying after 10 attempts
       return Math.min(times * 200, 5000);
