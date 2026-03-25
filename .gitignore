@@ -1,1 +1,8 @@
-
+node_modules/
+.env
+firebase-service-account.json
+settings.json
+reports.json
+jwt_error.log
+audit_log.json
+logs/
