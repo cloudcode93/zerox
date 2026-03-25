@@ -157,4 +157,24 @@ module.exports = (supabase, onlineUsersService, queueService, cache, INSTANCE_ID
       console.log(`[Cron] Online users: ${count}`);
     } catch (err) { console.error('[Cron] Snapshot error:', err.message); }
   });
+
+  // ════════════════════════════════════════════════════════════
+  // Every 10 minutes: Keep-Awake Ping for all instances
+  // ════════════════════════════════════════════════════════════
+  cron.schedule('*/10 * * * *', async () => {
+    if (!(await acquireLock('keep_awake', 500))) return;
+
+    const urls = (process.env.PING_URLS || process.env.SERVER_URL || '')
+      .split(',').map(u => u.trim()).filter(u => u.startsWith('http'));
+
+    if (urls.length > 0) {
+      console.log(`[Cron] Pinging ${urls.length} instances to keep them awake...`);
+      for (const url of urls) {
+        try {
+          const httpModule = url.startsWith('https') ? require('https') : require('http');
+          httpModule.get(url).on('error', () => {}); // Catch silent errors
+        } catch (e) { /* ignore */ }
+      }
+    }
+  });
 };
